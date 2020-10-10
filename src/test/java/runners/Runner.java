@@ -8,11 +8,13 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         //Path of the features folder
         features ="src/test/resources/features",
-        //Path of the step definitions folder
+//        Path of the step definitions folder
         glue = "stepdefinitions",
-        tags = "@datatable",
+//        tags = "@datatablewithparams and @teapot",
+        tags ="@test1 and not @test2",
         dryRun = false
 
 )
 public class Runner {
+
 }

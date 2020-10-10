@@ -1,4 +1,3 @@
-@datatable
 Feature: US1001_user_should_add_data
 
   Scenario: TC01_Testing_the_data_tables_web_page
@@ -14,3 +13,5 @@ Feature: US1001_user_should_add_data
     And user clicks on the create button
     And search for the first name
     Then verify the name fields contains first name
+
+

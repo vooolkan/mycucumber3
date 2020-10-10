@@ -36,7 +36,7 @@ public class DataTablesStepDefinition {
 
     @When("user enters the position")
     public void user_enters_the_position() {
-        dataTablePage.position.sendKeys("sdet");
+        dataTablePage.position.sendKeys("Manager");
 
     }
 
@@ -80,6 +80,53 @@ public class DataTablesStepDefinition {
     public void verify_the_name_fields_contains_first_name() throws InterruptedException {
         Thread.sleep(5000);
         Assert.assertTrue(dataTablePage.nameField.getText().contains("Jonny"));
+    }
+
+    @When("user enters the firstname {string}")
+    public void user_enters_the_firstname(String string) {
+        dataTablePage.firstName.sendKeys(string);
+
+    }
+
+    @When("user enters the lastname {string}")
+    public void user_enters_the_lastname(String string) {
+        dataTablePage.lastName.sendKeys(string);
+
+    }
+    @When("user enters the position {string}")
+    public void user_enters_the_position(String string) {
+        dataTablePage.position.sendKeys(string);
+
+    }
+    @When("user enters the office {string}")
+    public void user_enters_the_office(String string) {
+        dataTablePage.office.sendKeys(string);
+
+    }
+    @When("user enters the extension {string}")
+    public void user_enters_the_extension(String string) {
+        dataTablePage.extension.sendKeys(string);
+
+    }
+    @When("user enters the startdate {string}")
+    public void user_enters_the_startdate(String string) {
+        dataTablePage.startDate.sendKeys(string);
+
+    }
+    @When("user enters the salary {string}")
+    public void user_enters_the_salary(String string) {
+        dataTablePage.salary.sendKeys(string);
+
+    }
+    @When("search for the first name {string}")
+    public void search_for_the_first_name(String string) {
+        dataTablePage.searchBox.sendKeys(string);
+
+    }
+    @Then("verify the name fields contains first name {string}")
+    public void verify_the_name_fields_contains_first_name(String string) throws InterruptedException {
+        Thread.sleep(5000);
+        Assert.assertTrue(dataTablePage.nameField.getText().contains(string));
 
     }
 

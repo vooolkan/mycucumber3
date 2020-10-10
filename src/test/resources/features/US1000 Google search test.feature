@@ -8,6 +8,7 @@ Feature: US1000 Google search test
     And user search for "school bag"
     Then verify the result has "school bag"
 
+    @teapot
   Scenario: TC02 Verify tea pot search
     And user search for "tea pot"
     Then verify the result has "tea pot"
@@ -15,7 +16,7 @@ Feature: US1000 Google search test
   Scenario: TC03 Verify flower search
     And user search for "flower"
     Then verify the result has "flower"
-
+  @test1 @test2
   Scenario: TC04 Verify bmw search
     And user search for "bmw"
     Then verify the result has "bmw"
