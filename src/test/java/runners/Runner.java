@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"
         },
-        //plugin = "html:target\\default-cucumber-reports",
+        //plugin = "html:target\\default-cucumber-reports",//for windows
         features ="src/test/resources/features",
         glue = "stepdefinitions",
         tags = "@hooks",
