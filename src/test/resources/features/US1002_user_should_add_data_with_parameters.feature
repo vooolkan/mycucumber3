@@ -1,6 +1,6 @@
-@test1
 Feature: US1002_user_should_add_data_with_parameter
 
+  @regression
   Scenario: TC01_Testing_the_data_tables_web_page
     Given user is on the datatables page
     And user clicks on the new button
@@ -15,6 +15,7 @@ Feature: US1002_user_should_add_data_with_parameter
     And search for the first name "fake1"
     Then verify the name fields contains first name "fake1"
 
+  @regression
   Scenario: TC02_Testing_the_data_tables_web_page
     Given user is on the datatables page
     And user clicks on the new button

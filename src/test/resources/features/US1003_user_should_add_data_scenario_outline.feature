@@ -1,6 +1,6 @@
-@test1
 Feature: US1003_user_should_add_data_scenario_outline
 
+  @regression
   Scenario Outline: TC01_Testing_the_data_tables_web_page
     Given user is on the datatables page
     And user clicks on the new button
