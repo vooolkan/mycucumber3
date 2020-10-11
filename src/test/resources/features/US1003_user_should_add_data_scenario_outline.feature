@@ -1,4 +1,4 @@
-@scenario_outline
+@test1
 Feature: US1003_user_should_add_data_scenario_outline
 
   Scenario Outline: TC01_Testing_the_data_tables_web_page
