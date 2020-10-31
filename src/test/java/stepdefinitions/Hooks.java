@@ -9,9 +9,9 @@ import utilities.Driver;
 
 public class Hooks {
 
-    @Before
-    public void setUp(){
-    }
+//    @Before
+//    public void setUp(){
+//    }
 
     @After
     public void tearDown(Scenario scenario){

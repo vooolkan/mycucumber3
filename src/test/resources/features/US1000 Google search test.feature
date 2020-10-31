@@ -3,7 +3,7 @@ Feature: US1000 Google search test
 
   Background: User is on the google page
     Given user is on the google page
-
+  @hooks
   Scenario: TC01 Verify iphone search
     And user search for "school bag"
     Then verify the result has "school bag"

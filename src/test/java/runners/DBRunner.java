@@ -14,11 +14,10 @@ import org.junit.runner.RunWith;
         },
         //plugin = "html:target\\default-cucumber-reports",//for windows
         features ="src/test/resources/features",
-        glue = "stepdefinitions",
+        glue = "database_stepdefinition",
         tags = "@dbtest",
         dryRun = false
 
 )
-public class Runner {
-
+public class DBRunner {
 }
