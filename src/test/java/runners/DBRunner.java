@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
         //plugin = "html:target\\default-cucumber-reports",//for windows
         features ="src/test/resources/features",
         glue = "database_stepdefinition",
+        //tags = "@dbtest",
         tags = "@dbtest",
         dryRun = false
 
