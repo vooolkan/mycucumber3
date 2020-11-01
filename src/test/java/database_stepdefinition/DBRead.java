@@ -1,6 +1,7 @@
 package database_stepdefinition;
 
 import io.cucumber.java.en.Given;
+import org.junit.Assert;
 
 import java.sql.*;
 
@@ -23,7 +24,10 @@ public class DBRead {
     @Given("user gets {string} the {string} table")
     public void user_gets_the_table(String string, String string2) throws SQLException {
         //Running the query to connect tHOTEL table.
-        resultSet=statement.executeQuery("SELECT Name FROM dbo.tHOTEL");
+        //DYNAMIC QUERY:SELECT Name FROM dbo.tHOTEL
+        //resultSet=statement.executeQuery("SELECT Name FROM dbo.tHOTEL");
+        resultSet=statement.executeQuery("SELECT "+string+" FROM dbo.t"+string2);
+
 
     }
 
@@ -32,17 +36,29 @@ public class DBRead {
         resultSet.next();//SKIPPING THE FIRST ROW. next() methods goes to teh next row
         resultSet.next();
         resultSet.next();
-        Object object1=resultSet.getObject("Name");
+        Object object1=resultSet.getObject(string);
         System.out.println(object1);
         resultSet.next();
-        System.out.println(resultSet.getObject("Name"));
+        System.out.println(resultSet.getObject(string));
         resultSet.next();
-        System.out.println(resultSet.getObject("Name"));
-
+        System.out.println(resultSet.getObject(string));
+        while (resultSet.next()){
+            Object obj=resultSet.getObject(string);
+            System.out.println(obj);
+//            if (obj.toString().equals("SUNSET")){//If there is a hotel name SUNSET, then fail
+//                Assert.fail();
+//            }
+        }
     }
 
     @Given("user gets the value in row {int} in {string} column and verifies the value is {string}")
-    public void user_gets_the_value_in_row_in_column_and_verifies_the_value_is(Integer int1, String string, String string2) {
+    public void user_gets_the_value_in_row_in_column_and_verifies_the_value_is(Integer int1, String string, String string2) throws SQLException {
+//        System.out.println(int1);
+//        System.out.println(string);
+//        System.out.println(string2);
+        resultSet.absolute(int1);//Obsolute is to go to a certain row
+        Object obj=resultSet.getObject(string);//Going to the column
+        System.out.println(obj.toString());
+        Assert.assertEquals(string2,obj.toString());//making the assertion
     }
-
 }

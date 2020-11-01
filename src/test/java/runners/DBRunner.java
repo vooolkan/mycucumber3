@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features ="src/test/resources/features",
         glue = "database_stepdefinition",
         //tags = "@dbtest",
-        tags = "@dbtest",
+        tags = "@dbedit",
         dryRun = false
 
 )
