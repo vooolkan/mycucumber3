@@ -4,7 +4,6 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
@@ -15,10 +14,9 @@ import org.junit.runner.RunWith;
         //plugin = "html:target\\default-cucumber-reports",//for windows
         features ="src/test/resources/features",
         glue = "database_stepdefinition",
-        //tags = "@dbtest",
         tags = "@dbedit",
         dryRun = false
-
 )
+
 public class DBRunner {
 }

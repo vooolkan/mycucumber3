@@ -13,7 +13,7 @@ public class DBUpdate_StepDefinitions {
     }
 
     @Given("user updates Email as {string} when IDHotel is {int}")
-    public void user_updates_Email_as_when_IDHotel_is(String string, Integer int1) throws SQLException {
+    public void user_updates_Email_as_when_IDHotel_is(String string, Integer int1) throws Exception {
         //Writing the query
         String query = "SELECT Email FROM dbo.tHOTEL";
         //Executing the query
